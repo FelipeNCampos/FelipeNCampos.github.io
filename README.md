@@ -1,4 +1,4 @@
-# Portfólio Felipe — protótipo narrativo / versão branca
+# Portfólio Felipe —  narrativo 
 
 [Design editável no Figma](https://www.figma.com/design/keTvan2jU7ldvieoXY5xO2) · [Wireframe](../docs/05-wireframe-portfolio.md)
 
