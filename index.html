@@ -1,342 +1,412 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Mario Galaxy</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="Felipe — da sua ideia a um produto seguro, funcional e eficiente.">
+  <title>Felipe — Da ideia ao produto</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="story.js" defer></script>
 </head>
 
 <body>
-    <canvas id="starfield" aria-hidden="true" role="presentation"></canvas>
+  <a class="skip" href="#contato">Pular para contato</a>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="signature mono">FELIPE / DESENVOLVEDOR</div>
+      <span class="index mono" aria-hidden="true"></span>
+      <h1 id="intro-title" aria-label="Olá, meu nome é Felipe"><span aria-hidden="true"><span class="intro-typed">Olá, meu nome é Felipe</span><span class="intro-cursor">|</span><span class="intro-remaining"></span></span></h1>
+      <a class="scroll-cue" href="#ideia"><span class="mono">ROLE PARA DESCOBRIR</span><span class="arrow"
+          aria-hidden="true">↓</span></a>
+    </section>
 
-    <nav class="floating-nav" aria-label="Navegação principal da página">
-        <ul class="floating-nav__list">
-            <li class="floating-nav__item">
-                <a href="#hero" class="floating-nav__link floating-nav__link--active" data-section="hero">SMG</a>
-            </li>
-            <li class="floating-nav__item" aria-hidden="true" role="presentation">
-                <span class="floating-nav__separator"></span>
-            </li>
-            <li class="floating-nav__item">
-                <a href="#personagens" class="floating-nav__link" data-section="personagens">Personagens</a>
-            </li>
-            <li class="floating-nav__item" aria-hidden="true" role="presentation">
-                <span class="floating-nav__separator"></span>
-            </li>
-            <li class="floating-nav__item">
-                <a href="#trailers" class="floating-nav__link" data-section="trailers">Trailers</a>
-            </li>
-            <li class="floating-nav__item" aria-hidden="true" role="presentation">
-                <span class="floating-nav__separator"></span>
-            </li>
-            <li class="floating-nav__item">
-                <a href="#estreia" class="floating-nav__link" data-section="estreia">Estreia</a>
-            </li>
-        </ul>
-    </nav>
-
-    <main id="conteudo-principal">
-        <section id="hero" class="hero" aria-labelledby="hero-heading">
-            <div class="hero__media-layer" aria-hidden="true">
-                <video class="hero__mario" autoplay loop muted playsinline>
-                    <source src="assets/videos/mario-clip-alpha.webm" type="video/webm">
-                    <source src="assets/videos/mario-clip-min.mp4" type="video/mp4">
-                </video>
-                <video class="hero__yoshi" autoplay loop muted playsinline>
-                    <source src="assets/videos/yoshi-video-alpha.webm" type="video/webm">
-                    <source src="assets/videos/yoshi-video-min.mp4" type="video/mp4">
-                </video>
-                <video class="hero__planet" autoplay loop muted playsinline>
-                    <source src="assets/videos/planet-3d-alpha.webm" type="video/webm">
-                    <source src="assets/videos/planet-3d-min.mp4" type="video/mp4">
-                </video>
-                <img class="hero__star hero__star--left" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                    width="72" height="72" decoding="async">
-                <img class="hero__star hero__star--right" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                    width="72" height="72" decoding="async">
-                <img class="hero__star hero__star--center" src="assets/images/estrela-min.webp" alt=""
-                    aria-hidden="true" width="56" height="56" decoding="async">
+    <section id="ideia" class="story" aria-label="Da ideia ao produto">
+      <div class="story-stage">
+        <div class="headings">
+          <div class="heading idea-heading">
+            <p class="eyebrow mono">02 / DA IDEIA</p>
+            <h2>e sou um desenvolvedor capaz<br class="desktop-break"> de tornar a sua ideia</h2>
+          </div>
+          <div class="heading product-heading">
+            <p class="eyebrow mono">03 / AO PRODUTO</p>
+            <h2>em um produto seguro,<br class="desktop-break"> funcional e eficiente</h2>
+          </div>
+        </div>
+        <div class="artwork">
+          <div class="idea-image" role="img"
+            aria-label="Balão de conversa com duas engrenagens girando continuamente, representando uma ideia em desenvolvimento">
+            <div class="conversation-copy">
+              <p class="eyebrow mono">O PONTO DE PARTIDA</p>
+              <h3>Uma conversa.<br>Infinitas possibilidades.</h3>
+              <p>Sua ideia começa a ganhar forma.</p>
             </div>
-
-            <div class="hero__content-layer">
-                <div class="hero__badge">NOS CINEMAS AGORA</div>
-                <h1 id="hero-heading" class="hero__title">
-                    <span class="hero__title-line1">Super Mario</span>
-                    <span class="hero__title-line2">Galaxy: O Filme</span>
-                </h1>
-                <p class="hero__subtitle">UMA AVENTURA ÉPICA PELO COSMOS</p>
-                <button type="button" class="hero__cta">
-                    Assistir Trailer
-                    <span class="hero__cta-icon" aria-hidden="true"></span>
-                </button>
+            <svg class="conversation-art" viewBox="0 0 560 420" aria-hidden="true">
+              <defs>
+                <linearGradient id="bubble-fill" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#FFFFFF" />
+                  <stop offset="1" stop-color="#EAF5EF" />
+                </linearGradient>
+                <linearGradient id="gear-fill" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#F5F9F6" />
+                  <stop offset="1" stop-color="#B5CBBE" />
+                </linearGradient>
+              </defs>
+              <ellipse class="bubble-shadow" cx="285" cy="364" rx="166" ry="15" />
+              <path class="bubble-back"
+                d="M138 104H432Q472 104 472 144V266Q472 306 432 306H394L428 350L350 306H138Q98 306 98 266V144Q98 104 138 104Z" />
+              <path class="bubble-front"
+                d="M98 60H390Q432 60 432 102V232Q432 274 390 274H190L116 326L130 274H98Q56 274 56 232V102Q56 60 98 60Z" />
+              <g transform="translate(217 162)">
+                <g class="gear gear-large">
+                  <path class="gear-teeth"
+                    d="M57.00,0.00 L69.40,9.14 L67.61,18.12 L52.66,21.81 L49.36,28.50 L55.53,42.61 L49.50,49.50 L34.70,45.22 L28.50,49.36 L26.79,64.67 L18.12,67.61 L7.44,56.51 L0.00,57.00 L-9.14,69.40 L-18.12,67.61 L-21.81,52.66 L-28.50,49.36 L-42.61,55.53 L-49.50,49.50 L-45.22,34.70 L-49.36,28.50 L-64.67,26.79 L-67.61,18.12 L-56.51,7.44 L-57.00,0.00 L-69.40,-9.14 L-67.61,-18.12 L-52.66,-21.81 L-49.36,-28.50 L-55.53,-42.61 L-49.50,-49.50 L-34.70,-45.22 L-28.50,-49.36 L-26.79,-64.67 L-18.12,-67.61 L-7.44,-56.51 L-0.00,-57.00 L9.14,-69.40 L18.12,-67.61 L21.81,-52.66 L28.50,-49.36 L42.61,-55.53 L49.50,-49.50 L45.22,-34.70 L49.36,-28.50 L64.67,-26.79 L67.61,-18.12 L56.51,-7.44 Z" />
+                  <circle r="31" class="gear-hub" />
+                  <circle r="12" class="gear-center" />
+                </g>
+              </g>
+              <g transform="translate(322 207)">
+                <g class="gear gear-small">
+                  <path class="gear-teeth"
+                    d="M39.00,0.00 L49.38,7.82 L47.55,15.45 L34.75,17.71 L31.55,22.92 L35.36,35.36 L29.39,40.45 L17.71,34.75 L12.05,37.09 L7.82,49.38 L0.00,50.00 L-6.10,38.52 L-12.05,37.09 L-22.70,44.55 L-29.39,40.45 L-27.58,27.58 L-31.55,22.92 L-44.55,22.70 L-47.55,15.45 L-38.52,6.10 L-39.00,0.00 L-49.38,-7.82 L-47.55,-15.45 L-34.75,-17.71 L-31.55,-22.92 L-35.36,-35.36 L-29.39,-40.45 L-17.71,-34.75 L-12.05,-37.09 L-7.82,-49.38 L-0.00,-50.00 L6.10,-38.52 L12.05,-37.09 L22.70,-44.55 L29.39,-40.45 L27.58,-27.58 L31.55,-22.92 L44.55,-22.70 L47.55,-15.45 L38.52,-6.10 Z" />
+                  <circle r="23" class="gear-hub" />
+                  <circle r="8" class="gear-center" />
+                </g>
+              </g>
+              <circle cx="110" cy="110" r="5" class="bubble-dot" />
+              <circle cx="130" cy="110" r="5" class="bubble-dot" />
+              <circle cx="150" cy="110" r="5" class="bubble-dot" />
+            </svg>
+          </div>
+          <div class="product-image" role="img"
+            aria-label="Três camadas de um produto se aproximam e se encaixam conforme a rolagem: estrutura, lógica e experiência">
+            <div class="product-header"><span class="mono">DA IDEIA À REALIDADE</span><span class="badge">Peça por
+                peça</span></div>
+            <div class="assembly-scene" aria-hidden="true">
+              <div class="assembly-shadow"></div>
+              <div class="assembly-layer layer-foundation">
+                <div class="foundation-grid"></div><span class="layer-mark">01</span>
+              </div>
+              <div class="assembly-layer layer-logic">
+                <div class="logic-path"></div><i></i><i></i><i></i><span class="layer-mark">02</span>
+              </div>
+              <div class="assembly-layer layer-experience">
+                <div class="mini-nav"><span></span><span></span><span></span></div>
+                <div class="mini-title"></div>
+                <div class="mini-content">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div><span class="layer-mark">03</span>
+              </div>
             </div>
-
-            <div class="hero__scroll-indicator">
-                <span class="hero__scroll-text">ROLE PARA EXPLORAR</span>
+            <div class="assembly-caption">
+              <h3>Software robusto com <i>Eficácia</i> e <i>Segurança</i></h3>
+              <p class="mono"><b>Bom planejamento</b><span>+</span><b>Boas práticas<b></p>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section id="marquee-personagens" class="marquee-personagens"
-            aria-label="Letreiro: Super Mario Galaxy, nos cinemas, aventura pelo cosmos e personagens">
-            <div class="marquee-personagens__viewport">
-                <div class="marquee-personagens__track">
-                    <div class="marquee-personagens__sequence">
-                        <span class="marquee-personagens__text">Super Mario Galaxy</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                        <span class="marquee-personagens__text">Nos cinemas</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                        <span class="marquee-personagens__text">Uma aventura pelo cosmos</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                        <span class="marquee-personagens__text">Mario</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                        <span class="marquee-personagens__text">Luigi</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                        <span class="marquee-personagens__text">Rosalina</span>
-                        <span class="marquee-personagens__sep" aria-hidden="true">/</span>
-                    </div>
-                    <div class="marquee-personagens__sequence" aria-hidden="true">
-                        <span class="marquee-personagens__text">Super Mario Galaxy</span>
-                        <span class="marquee-personagens__sep">/</span>
-                        <span class="marquee-personagens__text">Nos cinemas</span>
-                        <span class="marquee-personagens__sep">/</span>
-                        <span class="marquee-personagens__text">Uma aventura pelo cosmos</span>
-                        <span class="marquee-personagens__sep">/</span>
-                        <span class="marquee-personagens__text">Mario</span>
-                        <span class="marquee-personagens__sep">/</span>
-                        <span class="marquee-personagens__text">Luigi</span>
-                        <span class="marquee-personagens__sep">/</span>
-                        <span class="marquee-personagens__text">Rosalina</span>
-                        <span class="marquee-personagens__sep">/</span>
-                    </div>
+    <section id="pronto" class="delivery" aria-labelledby="ready-title">
+      <div class="delivery-stage">
+        <div class="ready-copy">
+          <p class="eyebrow mono">04 / PRONTO PARA O MUNDO</p>
+          <h2 id="ready-title">pronto para<br> o seu uso</h2>
+          <p class="subtitle">Da primeira ideia ao seu produto.</p>
+        </div>
+        <div class="terminal-side">
+          <div class="terminal">
+            <p class="command mono" aria-label="produto.publish()"><span aria-hidden="true" id="typed-command">$
+                produto.publish()</span><span class="cursor" aria-hidden="true">▌</span></p>
+            <div class="checks mono">
+              <p>✓ Segurança verificada</p>
+              <p>✓ Funcionalidades integradas</p>
+              <p>✓ Experiência otimizada</p>
+            </div>
+            <div class="progress" aria-hidden="true">
+              <div></div>
+            </div>
+            <p class="complete">Sua ideia no mercado.</p>
+            <p class="terminal-note mono">VISUALIZAÇÃO CONCEITUAL DO PROCESSO</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="portfolio-section projects" aria-labelledby="projects-title">
+      <div class="section-shell">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow mono">05 / PROJETOS PESSOAIS</p>
+            <h2 id="projects-title">Da prática,<br>para o mundo real.</h2>
+          </div>
+          <p>Sistemas que desenvolvi de ponta a ponta, conectando necessidades do negócio a soluções web.</p>
+        </header>
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-art property-art" aria-hidden="true"><span class="art-label mono">OPERAÇÃO
+                CONECTADA</span>
+              <div class="property-visual">
+                <div class="building building-small"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="building building-tall"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
                 </div>
+                <div class="building building-mid"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              </div><span class="art-caption mono">PESSOAS · TAREFAS · CONSUMO</span>
             </div>
-        </section>
-
-        <section id="personagens" class="personagens" aria-labelledby="personagens-heading">
-            <div class="personagens__particles-bg" aria-hidden="true">
-                <div id="personagens-particles-js"></div>
+            <div class="project-content">
+              <p class="project-type mono">01 / APP WEB · DESENVOLVIMENTO SOLO</p>
+              <h3>Gestão de condomínios</h3>
+              <p>Uma plataforma para centralizar a operação de condomínios no Reino Unido, com processos organizados e
+                rastreáveis.</p>
+              <ul class="tech-tags" aria-label="Tecnologias do projeto">
+                <li>Python</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+              </ul>
+              <details class="project-details">
+                <summary>O que desenvolvi <span aria-hidden="true">+</span></summary>
+                <ul>
+                  <li>API RESTful</li>
+                  <li>Controle de ponto/horas, registro de tarefas e controle de acesso temporario</li>
+                  <li>Agenda de tarefas padrões como teste de alarme de incendio, elevador, luz de emergência e outras
+                    manutenções </li>
+                  <li>Controle financeiro de entradas e saídas</li>
+                  <li>Mensageria twillio para funcionarios, moradores ou prestadores de serviços</li>
+                  <li>Relatórios automaticos de consumo, contas e funcionários</li>
+                  <li>Integração com sistemas externos como google calendar, google excel, twillio e scrapping de dados
+                  </li>
+                </ul>
+              </details>
             </div>
-            <div class="personagens__header">
-                <p class="personagens__eyebrow">CONHEÇA O ELENCO</p>
-                <h2 id="personagens-heading" class="personagens__title">Personagens</h2>
-                <p class="personagens__subtitle">OS HERÓIS E VILÕES DESTA AVENTURA GALÁCTICA</p>
+          </article>
+          <article class="project-card">
+            <div class="project-art identity-art" aria-hidden="true"><span class="art-label mono">IDENTIDADE
+                DIGITAL</span>
+              <div class="identity-visual">
+                <div class="identity-photo"><svg viewBox="0 0 48 48" fill="none">
+                    <circle cx="24" cy="16" r="7" />
+                    <path d="M10 39v-3a14 14 0 0 1 28 0v3" />
+                  </svg></div>
+                <div class="identity-lines"><i></i><i></i><i></i></div>
+                <div class="identity-signature"><svg viewBox="0 0 160 32" fill="none">
+                    <path d="M6 25C28-10 43 0 28 22S32 35 48 14s-7 17 14 8 10-18 18-6 18-5 24 0 24 0 46-6" />
+                  </svg></div><span class="identity-check">✓</span>
+              </div><span class="art-caption mono">CADASTRO · COLETA · EMISSÃO</span>
             </div>
-
-            <div class="personagens__stage">
-                <figure class="personagem personagem--mario">
-                    <img src="assets/images/mario-original.webp" alt="Mario" loading="lazy" width="520" height="620">
-                    <figcaption>Mario</figcaption>
-                </figure>
-                <figure class="personagem personagem--luigi">
-                    <img src="assets/images/luigi.webp" alt="Luigi" loading="lazy" width="440" height="560">
-                    <figcaption>Luigi</figcaption>
-                </figure>
-                <figure class="personagem personagem--peach">
-                    <img src="assets/images/peach.webp" alt="Peach" loading="lazy" width="380" height="500">
-                    <figcaption>Peach</figcaption>
-                </figure>
-                <figure class="personagem personagem--rosalina">
-                    <img src="assets/images/rosalina.webp" alt="Rosalina" loading="lazy" width="400" height="560">
-                    <figcaption>Rosalina</figcaption>
-                </figure>
-                <figure class="personagem personagem--yoshi">
-                    <img src="assets/images/yoshi-perso.webp" alt="Yoshi" loading="lazy" width="620" height="440">
-                    <figcaption>Yoshi</figcaption>
-                </figure>
-                <figure class="personagem personagem--bowser-jr">
-                    <img src="assets/images/bowser-jr.webp" alt="Bowser Jr." loading="lazy" width="420" height="480">
-                    <figcaption>Bowser Jr.</figcaption>
-                </figure>
+            <div class="project-content">
+              <p class="project-type mono">02 / APP WEB · Desenolvimento SOLO</p>
+              <h3>Coleta de dados corporativos</h3>
+              <p>Gestão de identidade profissional e emissão de carteirinhas, com um fluxo digital para cadastro e
+                coleta de documentos.</p>
+              <ul class="tech-tags" aria-label="Recursos do projeto">
+                <li>Automação</li>
+                <li>Perfis de acesso</li>
+                <li>Coleta digital</li>
+              </ul>
+              <details class="project-details">
+                <summary>O que desenvolvi <span aria-hidden="true">+</span></summary>
+                <ul>
+                  <li>API Restful</li>
+                  <li>CRM básico com empresas, funcionários e leads.</li>
+                  <li>Coleta de assinaturas digitais, fotos e documentos com segurança.</li>
+                  <li>Gestão com transparência para ambos os lados.</li>
+                  <li>Integração com IA para análise de dados existentes, identificando pendências de informações em estruturas de dados legadas </li>
+                </ul>
+              </details>
             </div>
-        </section>
-
-        <section id="trailers" class="trailers" aria-labelledby="trailers-title">
-            <div class="trailers__bg-text" aria-hidden="true">TRAILERS</div>
-
-            <header class="trailers__header">
-                <p class="trailers__eyebrow">Assista agora</p>
-                <h2 id="trailers-title" class="trailers__title">Trailers oficiais</h2>
-                <p class="trailers__subtitle">Clipes da aventura no espaco</p>
-            </header>
-
-            <div class="trailers__carousel" role="region" aria-roledescription="carousel" aria-label="Trailers oficiais"
-                tabindex="0">
-                <p id="trailers-carousel-live" class="sr-only" aria-live="polite" aria-atomic="true"></p>
-                <div class="trailers__viewport">
-                    <ul class="trailers__track">
-                        <li id="trailers-slide-0" class="trailers__slide" aria-roledescription="slide" aria-label="1 de 4">
-                            <div class="trailers__player">
-                                <iframe
-                                    data-src="https://www.youtube-nocookie.com/embed/8uaQnl9Bbdw?rel=0"
-                                    src="https://www.youtube-nocookie.com/embed/8uaQnl9Bbdw?rel=0"
-                                    title="Super Mario Galaxy: O Filme — trailer principal"
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </li>
-                        <li id="trailers-slide-1" class="trailers__slide" aria-roledescription="slide" aria-label="2 de 4">
-                            <div class="trailers__player">
-                                <iframe
-                                    data-src="https://www.youtube-nocookie.com/embed/QVD48BOcwms?rel=0"
-                                    title="The Super Mario Bros. Movie — teaser oficial"
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </li>
-                        <li id="trailers-slide-2" class="trailers__slide" aria-roledescription="slide" aria-label="3 de 4">
-                            <div class="trailers__player">
-                                <iframe
-                                    data-src="https://www.youtube-nocookie.com/embed/TnGl01FkMMo?rel=0"
-                                    title="The Super Mario Bros. Movie — trailer oficial"
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </li>
-                        <li id="trailers-slide-3" class="trailers__slide" aria-roledescription="slide" aria-label="4 de 4">
-                            <div class="trailers__player">
-                                <iframe
-                                    data-src="https://www.youtube-nocookie.com/embed/M3bHQqc62DE?rel=0"
-                                    title="The Super Mario Bros. Movie — trailer final"
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin"
-                                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="trailers__controls">
-                    <button type="button" class="trailers__arrow trailers__arrow--prev" aria-label="Trailer anterior">
-                        <span aria-hidden="true">&#8249;</span>
-                    </button>
-                    <div class="trailers__dots" role="tablist" aria-label="Selecao de trailers">
-                        <button type="button" class="trailers__dot is-active" role="tab" aria-label="Ir para trailer 1"
-                            aria-selected="true" aria-controls="trailers-slide-0" id="trailers-tab-0"></button>
-                        <button type="button" class="trailers__dot" role="tab" aria-label="Ir para trailer 2"
-                            aria-selected="false" aria-controls="trailers-slide-1" id="trailers-tab-1"></button>
-                        <button type="button" class="trailers__dot" role="tab" aria-label="Ir para trailer 3"
-                            aria-selected="false" aria-controls="trailers-slide-2" id="trailers-tab-2"></button>
-                        <button type="button" class="trailers__dot" role="tab" aria-label="Ir para trailer 4"
-                            aria-selected="false" aria-controls="trailers-slide-3" id="trailers-tab-3"></button>
-                    </div>
-                    <button type="button" class="trailers__arrow trailers__arrow--next" aria-label="Proximo trailer">
-                        <span aria-hidden="true">&#8250;</span>
-                    </button>
-                </div>
+          </article>
+          <article class="project-card">
+            <div class="project-art crm-art" aria-hidden="true"><span class="art-label mono">CADA OPORTUNIDADE, NO
+                LUGAR</span>
+              <div class="pipeline-visual">
+                <div><span></span><i></i><i></i><i></i></div>
+                <div><span></span><i></i><i></i></div>
+                <div><span></span><i class="won-card">✓</i></div>
+              </div><span class="art-caption mono">LEADS · RELACIONAMENTO · VENDAS</span>
             </div>
-        </section>
-
-        <section id="estreia" class="estreia" aria-labelledby="estreia-heading">
-            <div class="estreia__nebula estreia__nebula--top-left" aria-hidden="true"></div>
-            <div class="estreia__nebula estreia__nebula--top-right" aria-hidden="true"></div>
-            <div class="estreia__nebula estreia__nebula--bottom-left" aria-hidden="true"></div>
-            <div class="estreia__galaxy" aria-hidden="true"></div>
-
-            <img class="estreia__star estreia__star--tl" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                width="56" height="56" decoding="async">
-            <img class="estreia__star estreia__star--tr" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                width="56" height="56" decoding="async">
-            <img class="estreia__star estreia__star--mr" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                width="56" height="56" decoding="async">
-            <img class="estreia__star estreia__star--bl" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                width="56" height="56" decoding="async">
-            <img class="estreia__star estreia__star--br" src="assets/images/estrela-min.webp" alt="" aria-hidden="true"
-                width="56" height="56" decoding="async">
-
-            <div class="estreia__container">
-                <header class="estreia__header">
-                    <h2 id="estreia-heading" class="estreia__title">
-                        Cada <span class="estreia__highlight">estrela</span> guarda uma
-                        <br>
-                        história. A sua começa <span class="estreia__highlight estreia__highlight--rose">agora.</span>
-                    </h2>
-                    <p class="estreia__subtitle">SUPER MARIO GALAXY: O FILME</p>
-                    <div class="estreia__divider" aria-hidden="true"></div>
-                </header>
-
-                <div class="estreia__countdown-block">
-                    <p class="estreia__countdown-label">ESTREIA NOS CINEMAS EM</p>
-
-                    <p id="estreia-countdown-live" class="sr-only" aria-live="polite"></p>
-
-                    <div class="estreia__countdown-card" aria-hidden="true">
-                        <div class="countdown">
-                            <div class="countdown-unit" data-unit="dia">
-                                <div class="countdown-card">
-                                    <div class="countdown-card__inner">
-                                        <span class="countdown-value">0</span>
-                                    </div>
-                                </div>
-                                <span class="countdown-unit__label">DIAS</span>
-                            </div>
-                            <div class="countdown-unit" data-unit="hor">
-                                <div class="countdown-card">
-                                    <div class="countdown-card__inner">
-                                        <span class="countdown-value">00</span>
-                                    </div>
-                                </div>
-                                <span class="countdown-unit__label">HORAS</span>
-                            </div>
-                            <div class="countdown-unit" data-unit="min">
-                                <div class="countdown-card">
-                                    <div class="countdown-card__inner">
-                                        <span class="countdown-value">00</span>
-                                    </div>
-                                </div>
-                                <span class="countdown-unit__label">MIN</span>
-                            </div>
-                            <div class="countdown-unit" data-unit="seg">
-                                <div class="countdown-card">
-                                    <div class="countdown-card__inner">
-                                        <span class="countdown-value">00</span>
-                                    </div>
-                                </div>
-                                <span class="countdown-unit__label">SEG</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <p class="estreia__date">Dia 25 de Dezembro, 2026</p>
-                </div>
-
-               
+            <div class="project-content">
+              <p class="project-type mono">03 / SAAS · DESENVOLVIMENTO SOLO</p>
+              <h3>Gestão comercial</h3>
+              <p>Leads, clientes e atendimento conectados em um CRM modular, preparado para evoluir junto com o negócio.
+              </p>
+              <ul class="tech-tags" aria-label="Tecnologias do projeto">
+                <li>Python</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+                <li>Microserviços</li>
+              </ul>
+              <details class="project-details">
+                <summary>O que desenvolvi <span aria-hidden="true">+</span></summary>
+                <ul>
+                  <li>Módulos por domínio: vendas, atendimento, financeiro e relatórios.</li>
+                  <li>Automação de distribuição de leads e atualização de status.</li>
+                  <li>Indicadores operacionais e arquitetura voltada à evolução incremental.</li>
+                </ul>
+              </details>
             </div>
+          </article>
+        </div>
+        <div class="section-footnote">
+          <p>Muitos outros projetos voltados à web e automações disponíveis no meu GitHub.</p><a class="text-link"
+            href="https://github.com/FelipeNCampos" target="_blank" rel="noopener noreferrer">Conheça meu GitHub <span
+              aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
 
-            <footer class="estreia__footer">
-                <p class="estreia__project">Super Mario Galaxy: O Filme</p>
-                <p class="estreia__disclaimer">
-                    Projeto conceitual para fins educacionais. Nintendo, Mario e personagens relacionados são marcas
-                    registradas da Nintendo Co., Ltd.
-                </p>
-                <nav class="site-legal-nav" aria-label="Links legais do NotificacaoVampi">
-                    <span class="site-legal-nav__label">NotificacaoVampi</span>
-                    <a href="politica-de-privacidade.html">Política de Privacidade</a>
-                    <a href="termos-de-servico.html">Termos de Serviço</a>
-                    <a href="exclusao-de-dados.html">Exclusão de Dados</a>
-                </nav>
-            </footer>
-        </section>
-    </main>
+    <section id="competencias" class="portfolio-section skills" aria-labelledby="skills-title">
+      <div class="section-shell">
+        <header class="section-heading">
+          <div>
+            <p class="eyebrow mono">06 / COMPETÊNCIAS</p>
+            <h2 id="skills-title">Tecnologia com<br>propósito.</h2>
+          </div>
+          <p>Desenvolvimento <b>full stack</b>, usando tecnologias de fácil manutenção como <b>Python, PostgreSQL, React e Docker</b></p>
+        </header>
+        <div class="skills-layout">
+          <aside class="skills-profile" aria-label="Apresentação profissional"><span class="profile-symbol mono"
+              aria-hidden="true">{ fn }</span>
+            <h3>Minha formação</h3>
+            <p>Sou estudante de Engenharia de Software na <b>UFG</b>. Minha experiência prática envolve <b> Web, Automações,
+              coleta e análise de dados </b> orientados às necessidades de cada negócio.</p>
+            <div class="profile-facts">
+              <p><span class="mono">FORMAÇÃO</span>Engenharia de Software · UFG<small>Em andamento · conclusão prevista
+                  em jul. 2028</small></p>
+              <p><span class="mono">IDIOMAS</span>Português nativo · Inglês avançado</p>
+            </div><a class="text-link" href="#contato">Vamos conversar <span aria-hidden="true">↗</span></a>
+          </aside>
+          <div class="skills-grid">
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon mono" aria-hidden="true">{ }</span>
+                <h3>Backend & APIs</h3>
+              </div>
+              <p>Formado em boas práticas de desenvolvimento backend, com modelos bem documentados para fácil leitura e manutenção.</p>
+              <ul class="skill-tags" aria-label="Tecnologias backend">
+                <li><b>Python</b></li>
+                <li><b>Django</b></li>
+                <li><b>FastAPI</b></li>
+                <li>Go</li>
+                <li>Gin</li>
+                <li>Java</li>
+                <li><b>REST</b></li>
+                <li>Swagger</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon mono" aria-hidden="true">&lt;/&gt;</span>
+                <h3>Frontend</h3>
+              </div>
+              <p>Interfaces <b>funcionais, eficiêntes</b> e com <b>boa experiência</b> do usuário.</p>
+              <ul class="skill-tags" aria-label="Tecnologias frontend">
+                <li><b>HTML5</b></li>
+                <li><b>CSS3</b></li>
+                <li><b>JavaScript</b></li>
+                <li><b>React</b></li>
+                <li>TypeScript</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon" aria-hidden="true">↔</span>
+                <h3>Automação & integrações</h3>
+              </div>
+              <p><b>Bots, web scraping e workflows</b> para integrar processos e <b>reduzir tarefas manuais.</b></p>
+              <ul class="skill-tags" aria-label="Ferramentas de automação">
+                <li><b>n8n</b></li>
+                <li><b>Selenium</b></li>
+                <li><b>Python</b></li>
+                <li>Regex</li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon mono" aria-hidden="true">[ ]</span>
+                <h3>Dados & dashboards</h3>
+              </div>
+              <p><b>Extração, tratamento e apresentação</b> de dados para <b>acompanhar a operação.</b></p>
+              <ul class="skill-tags" aria-label="Ferramentas de dados">
+                <li><b>Pandas</b></li>
+                <li><b>SQLAlchemy</b></li>
+                <li><b>Pydantic</b></li>
+                <li><b>Google Sheets</b></li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon mono" aria-hidden="true">&gt;_</span>
+                <h3>Infraestrutura</h3>
+              </div>
+              <p><b>Configuração de ambientes, manutenção de servidores e versionamento</b> do código.</p>
+              <ul class="skill-tags" aria-label="Ferramentas de infraestrutura">
+                <li><b>Docker</b></li>
+                <li><b>Linux</b></li>
+                <li><b>Git</b></li>
+                <li><b>GitHub</b></li>
+                <li><b>GitFlow</b></li>
+              </ul>
+            </article>
+            <article class="skill-card">
+              <div class="skill-card-heading"><span class="skill-icon" aria-hidden="true">▦</span>
+                <h3>Arquitetura & método</h3>
+              </div>
+              <p><b>Organização por domínio e entregas incrementais</b> para facilitar manutenção e evolução.</p>
+              <ul class="skill-tags" aria-label="Práticas de desenvolvimento">
+                <li><b>Arquitetura modular</b></li>
+                <li><b>Kanban</b></li>
+                <li><b>Metodologias ágeis</b></li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
+    <section id="contato" class="contact" aria-labelledby="contact-title">
+      <div class="contact-heading">
+        <p class="eyebrow mono">O PRÓXIMO PASSO</p>
+        <h2 id="contact-title">Vamos tirar sua ideia<br>do papel?</h2>
+        <p>Conte o que você tem em mente. A gente começa por uma conversa.</p>
+      </div>
+      <article class="contact-card" aria-label="Contato de Felipe Nunes">
+        <div class="contact-photo" role="img" aria-label="Espaço reservado para a foto de Felipe">
+          <svg viewBox="0 0 100 100" width="100" height="100" fill="none" aria-hidden="true">
+            <circle cx="50" cy="35" r="15" />
+            <path d="M20 84v-8a30 30 0 0 1 60 0v8" />
+          </svg>
+          <span class="mono">SUA FOTO AQUI</span>
+        </div>
+        <div class="contact-details">
+          <p class="eyebrow mono">DESENVOLVEDOR DE SOFTWARE</p>
+          <h3>Felipe Nunes</h3>
+          <p><b>Uma ideia</b>, <i>um problema</i> ou <b>um produto</b > para evoluir.<br class="desktop-break"> Vamos conversar sobre o
+            próximo passo.</p>
+          <nav class="contact-links" aria-label="Canais de contato">
+            <a class="contact-link contact-whatsapp" href="https://wa.me/5562994566196" target="_blank"
+              rel="noopener noreferrer" aria-label="Conversar com Felipe pelo WhatsApp (abre em nova aba)"><svg
+                viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 11.6a8.6 8.6 0 0 1-12.8 7.5L3 20.5l1.4-4.6A8.6 8.6 0 1 1 20.5 11.6Z" />
+                <path
+                  d="m8 7.6 1.2 2.7-1 1.1c.8 1.6 1.8 2.6 3.5 3.4l1.1-1 2.7 1.2c.2 1.2-.8 2-1.9 2-3.8-.3-7.2-3.7-7.5-7.4 0-1.1.8-2.1 1.9-2Z" />
+              </svg><span>WhatsApp</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="mailto:felipe.n.cmp@gmail.com"
+              aria-label="Enviar e-mail para felipe.n.cmp@gmail.com"><svg viewBox="0 0 24 24" fill="none"
+                aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="3" />
+                <path d="m4 7 8 6 8-6" />
+              </svg><span>E-mail</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+            <a class="contact-link" href="https://github.com/FelipeNCampos" target="_blank" rel="noopener noreferrer"
+              aria-label="Ver o GitHub de FelipeNCampos (abre em nova aba)"><svg viewBox="0 0 24 24" fill="currentColor"
+                aria-hidden="true">
+                <path
+                  d="M12 .9a11.1 11.1 0 0 0-3.5 21.6c.6.1.8-.2.8-.5v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.5-1.3-1.2-1.7-1.2-1.7-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.5-.3-5.1-1.3-5.1-5.5 0-1.2.4-2.2 1.1-3-.1-.3-.5-1.4.1-2.9 0 0 .9-.3 3.1 1.1A10.7 10.7 0 0 1 12 6c1 0 1.9.1 2.8.4 2.1-1.4 3.1-1.1 3.1-1.1.6 1.5.2 2.6.1 2.9.7.8 1.1 1.8 1.1 3 0 4.3-2.6 5.2-5.1 5.5.4.4.8 1 .8 2.1V22c0 .3.2.6.8.5A11.1 11.1 0 0 0 12 .9Z" />
+              </svg><span>GitHub</span><span class="link-arrow" aria-hidden="true">↗</span></a>
+          </nav>
+        </div>
+      </article>
+      <footer class="contact-footer"><span class="mono">FELIPE / DA IDEIA AO PRODUTO</span><a href="#intro-title">Voltar
+          ao início <span aria-hidden="true">↑</span></a></footer>
+    </section>
+  </main>
 </body>
 
 </html>
